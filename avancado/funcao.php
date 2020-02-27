@@ -30,9 +30,19 @@ function sacar ( $conta, $valorSacar){
         $conta['saldo'] -= $valorSacar;
     }
     return $conta;
+}// função feita para realizar deposito em uma conta o float na função é para dizer que o parâmetro só aceitará valor decimal
+function depositar ( $conta, float $valorDeposito){
+    if ($valorDeposito > 0){
+        $conta['saldo'] += $valorDeposito;
+    }else{
+        exibirMensagem('Deposito precisam ser positivos');
+    }
+
+    return $conta;
 }
 // estamos selecionando a conta desejada e tentamos retirar um valor de seu saldo, com isso estamos alterando a mesma
 $contasCorrentes[32165498712] = sacar($contasCorrentes[32165498712], 1000);
+$contasCorrentes[10987654321] = depositar($contasCorrentes[10987654321], -550);
 /*
  * CPF -> Indice de contasCorrentes
  * CONTA -> Valor contendo outro array com outros indices e valores.
