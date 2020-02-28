@@ -30,8 +30,11 @@ function sacar ( $conta, $valorSacar){
         $conta['saldo'] -= $valorSacar;
     }
     return $conta;
-}// função feita para realizar deposito em uma conta o float na função é para dizer que o parâmetro só aceitará valor decimal
-function depositar ( $conta, float $valorDeposito){
+}
+// função feita para realizar deposito em uma conta o float na função é para dizer que o parâmetro só aceitará valor decimal
+// estou definindo os tipos dos parâmetros e valor retornado pela função.
+function depositar ( array $conta, float $valorDeposito):array
+{
     if ($valorDeposito > 0){
         $conta['saldo'] += $valorDeposito;
     }else{
