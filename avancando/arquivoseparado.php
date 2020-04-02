@@ -23,7 +23,7 @@ $contasCorrentes = [
 ];
 
 $contasCorrentes[32165498712] = sacar($contasCorrentes[32165498712], 1000);
-$contasCorrentes[10987654321] = depositar($contasCorrentes[10987654321], -550);
+$contasCorrentes[10987654321] = depositar($contasCorrentes[10987654321], 50);
 letraMaiuscula($contasCorrentes[12345678910]);
 foreach ($contasCorrentes as $cpf => $conta){
     exibirMensagem($cpf . " " .$conta['titular']." ".$conta['saldo']);
