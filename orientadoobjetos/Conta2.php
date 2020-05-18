@@ -1,22 +1,21 @@
 <?php
 
-class Conta
-{
 
+class Conta2
+{
     private $cpfTitular;
     private $nomeTitular;
-    private $saldo = 0;
+    private $saldo;
 
-
-    public function defineNomeTitular(string $nome): void
-    {
-        $this->nomeTitular = $nome;
-    }
-
-    public function defineCpf(string $cpf): void
+    //construtor da classe
+    public function __construct(string $nome, string $cpf)
     {
         $this->cpfTitular = $cpf;
+        $this->nomeTitular= $nome;
+        $this->saldo = 0;
     }
+
+
     public function sacar(float $valorSacar): void
     {
         if ($valorSacar > $this->saldo) {
@@ -58,6 +57,4 @@ class Conta
     {
         return $this->cpfTitular;
     }
-
 }
-
